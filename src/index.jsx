@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './pages/home'
+import RomanNumeralConverter from './pages/home'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    <RomanNumeralConverter />
   </React.StrictMode>
 );
