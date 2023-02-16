@@ -30,7 +30,7 @@ const romanNumeralMap = {
 
 function splitDate(inputValue) {
   const dateArray = inputValue.split('/');
-  if (dateArray.length === 3) {
+  if (dateArray.length > 1) {
     return dateArray;
   }
 
@@ -47,49 +47,57 @@ function convertNumber(numberToConvert) {
   return convertThousands(numberToConvert);
 }
 
-
 function convertTens(numberToConvert) {
   const units = numberToConvert % 10;
   const tens  = (numberToConvert - units) / 10;
   const convertedNumber = tens * 10;
+  let romanConverted = '';
   if (romanNumeralMap[convertedNumber] !== undefined) {
-    romanNumeral+=romanNumeralMap[convertedNumber]
+    romanConverted+=romanNumeralMap[convertedNumber]
   } else {
     for (let i = 0; i < tens; i++) {
-      romanNumeral+=romanNumeralMap[10]
+      romanConverted+=romanNumeralMap[10]
     }
   }
 
-  romanNumeral+=romanNumeralMap[units];
+  romanConverted+=romanNumeralMap[units];
+
+  return romanConverted;
 }
 
 function convertHundreds(numberToConvert) {
   const tens = numberToConvert % 100;
   const hund  = (numberToConvert - tens) / 100;
   const convertedNumber = hund * 100;
+  let romanConverted = '';
   if (romanNumeralMap[convertedNumber] !== undefined) {
-    romanNumeral+=romanNumeralMap[convertedNumber]
+    romanConverted+=romanNumeralMap[convertedNumber]
   } else {
     for (let i = 0; i < hund; i++) {
-      romanNumeral+=romanNumeralMap[100]
+      romanConverted+=romanNumeralMap[100]
     }
   }
-  convertTens(tens);
+  romanConverted += convertTens(tens);
+
+  return romanConverted;
 }
 
 function convertThousands(numberToConvert) {
   const hund = numberToConvert % 1000;
   const thous  = (numberToConvert - hund) / 1000;
   const convertedNumber = thous * 1000;
+  let romanConverted = '';
   if (romanNumeralMap[convertedNumber] !== undefined) {
-    romanNumeral+=romanNumeralMap[convertedNumber]
+    romanConverted+=romanNumeralMap[convertedNumber]
   } else {
     for (let i = 0; i < thous; i++) {
-      romanNumeral+=romanNumeralMap[1000]
+      romanConverted+=romanNumeralMap[1000]
     }
   }
 
-  convertHundreds(hund);
+  romanConverted += convertHundreds(hund);
+
+  return romanConverted;
 }
 
 const RomanNumeralConverter = () => {
@@ -101,17 +109,22 @@ const RomanNumeralConverter = () => {
   };
 
   const handleConvertClick = () => {
-
-
     let number = splitDate(inputValue);
+    let result = [];
     if (Array.isArray(number)) {
-      number.map((element) => {
-        return convertNumber(parseInt(element));
-      })
+      for (let i = 0; i < number.length; i++) {
+        result.push({
+          'number': number[i],
+          'convertedNumber': convertNumber(parseInt(number[i])),
+        });
+      }
     } else {
-      convertNumber(parseInt(number));
+      result.push({
+        'number': number,
+        'convertedNumber': convertNumber(parseInt(number)),
+      });
     }
-console.log(romanNumeral);
+console.log(result);
     setOutputValue('');
   };
 
