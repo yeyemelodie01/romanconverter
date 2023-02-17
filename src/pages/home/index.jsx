@@ -30,6 +30,8 @@ function Home() {
   return (
       <ParenGrid>
         <Grid1>
+          <h1>Roman Date Converter</h1>
+          <h2>Convertisser une date ou un nombre</h2>
           <div>
             <label form='date'/>
             <input id="date" placeholder="Date" type="date"/>
