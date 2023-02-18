@@ -13,16 +13,20 @@ function Home() {
           </div>
         </div>
         <div className="secondChildGrid">
-          <div className="Flex">
+          <div className="contentFlex">
             <div>1</div>
-            <div className="border"></div>
+            <div className='border'/>
             <div>I</div>
           </div>
-          <div>
-
+          <div className="contentFlex">
+            <div>09</div>
+            <div className='border'/>
+            <div>IX</div>
           </div>
-          <div>
-
+          <div className="contentFlex">
+            <div>1933</div>
+            <div className='border'/>
+            <div>MCMXCIII</div>
           </div>
         </div>
         <div className="thirdChildGrid">
