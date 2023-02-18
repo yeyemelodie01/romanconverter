@@ -26,7 +26,7 @@ function Home() {
           </div>
         </div>
         <div className="thirdChildGrid">
-          <button>Enregistrer en .PDF</button>
+          <button className="styleButton">Enregistrer en .PDF</button>
         </div>
       </div>
   );
