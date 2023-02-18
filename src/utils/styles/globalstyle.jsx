@@ -13,7 +13,7 @@ const Styleglobal = createGlobalStyle`
 body {
   margin: 0;
   text-align: center;
-  
+  background-color: #F1F1F1;
 }
 
 img {
