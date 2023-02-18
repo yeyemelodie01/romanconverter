@@ -1,0 +1,34 @@
+.parentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.firstChildGrid{
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: aqua;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondChildGrid{
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: cadetblue;
+}
+
+.thirdChildGrid{
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleHome{
+    font-family: "EB Garamond", serif;
+    font-size: 70px;
+}

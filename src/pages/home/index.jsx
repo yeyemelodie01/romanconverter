@@ -1,44 +1,18 @@
-import styled from 'styled-components'
-
-const ParenGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-`
-
-const Grid1 = styled.div`
-  grid-area: 1 / 1 / 2 / 6;
-  background-color: aqua;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-`
-
-const Grid2 = styled.div`
-  grid-area: 2 / 1 / 3 / 6;
-  background-color: cadetblue;
-`
-
-const Grid3 = styled.div`
-  grid-area: 3 / 1 / 4 / 6;
-  background-color: cornflowerblue;
-`
+import '../../utils/styles/home.css'
 
 function Home() {
   return (
-      <ParenGrid>
-        <Grid1>
-          <h1>Roman Date Converter</h1>
+      <div className="parentGrid">
+        <div className="firstChildGrid">
+          <h1 className="titleHome">Roman Date Converter</h1>
           <h2>Convertisser une date ou un nombre</h2>
           <div>
             <label form='date'/>
             <input id="date" placeholder="Date" type="date"/>
             <button>Convertir</button>
           </div>
-        </Grid1>
-        <Grid2>
+        </div>
+        <div className="secondChildGrid">
           <div className="Flex">
             <div>1</div>
             <div className="border"></div>
@@ -50,11 +24,11 @@ function Home() {
           <div>
 
           </div>
-        </Grid2>
-        <Grid3>
+        </div>
+        <div className="thirdChildGrid">
           <button>Enregistrer en .PDF</button>
-        </Grid3>
-      </ParenGrid>
+        </div>
+      </div>
   );
 }
 

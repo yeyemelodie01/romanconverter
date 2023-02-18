@@ -1,15 +1,16 @@
 import LogoRoman from "../../assets/logo.png"
+import '../../utils/styles/header.css'
 
 function Header(){
   return(
       <header>
         <nav>
-          <div>
-              <img src={LogoRoman} alt="logo Roman Date Converter"/>
+          <div className="divImg">
+              <img className="styleLogo" src={LogoRoman} alt="logo Roman Date Converter"/>
           </div>
-          <ul>
-            <li>Accueil</li>
-            <li>À propos</li>
+          <ul className="listFlex">
+            <li className="liSize">ACCUEIL</li>
+            <li className="liSize">À PROPOS</li>
           </ul>
         </nav>
       </header>

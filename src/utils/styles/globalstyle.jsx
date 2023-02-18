@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import colors from './colors'
+//import colors from './colors'
 
 const Styleglobal = createGlobalStyle`
 * {
@@ -7,13 +7,13 @@ const Styleglobal = createGlobalStyle`
   margin: 0;
   padding: 0;
   outline: none;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', 'serif';
 }
 
 body {
   margin: 0;
   text-align: center;
-  color: ${colors.tertiary};
+  
 }
 
 img {
@@ -22,7 +22,7 @@ img {
 
 a {
   text-decoration: none;
-  color: ${colors.black};
+
 }
 
 main {

@@ -1,0 +1,26 @@
+header{
+    padding: 10px 160px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.divImg{
+    width: 8%;
+}
+
+.styleLogo{
+ width: 100%;
+}
+
+.listFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.liSize{
+    font-size: 20px;
+}
