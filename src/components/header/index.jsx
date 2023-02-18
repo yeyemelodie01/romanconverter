@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import LogoRoman from "../../assets/logo.png"
 import '../../utils/styles/header.css'
 
@@ -11,6 +13,14 @@ function Header(){
           <ul className="listFlex">
             <li className="liSize">ACCUEIL</li>
             <li className="liSize">À PROPOS</li>
+            <li>
+              <button>
+                <FontAwesomeIcon icon={faCoffee}/>
+              </button>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </header>
