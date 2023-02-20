@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0;
-    grid-row-gap: 0;
+    grid-row-gap: 30px;
 }
 
 .firstChildGrid{
@@ -18,6 +18,7 @@
     grid-area: 2 / 1 / 3 / 2;
     display: flex;
     justify-content: space-around;
+    height: 260px;
 }
 
 .thirdChildGrid{
@@ -30,6 +31,11 @@
 .titleHome{
     font-family: "EB Garamond", serif;
     font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.subTitleHome{
+    margin-bottom: 20px;
 }
 
 .contentFlex{

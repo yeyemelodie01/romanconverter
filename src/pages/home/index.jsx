@@ -1,11 +1,12 @@
 import '../../utils/styles/home.css'
 
+
 function Home() {
   return (
       <div className="parentGrid">
         <div className="firstChildGrid">
-          <h1 className="titleHome">Roman Date Converter</h1>
-          <h2>Convertisser une date ou un nombre</h2>
+          <h1 className="titleHome">Convertisseur de Chiffre Romain</h1>
+          <h2 className="subTitleHome">Convertisser une date ou un nombre</h2>
           <div>
             <label form='date'/>
             <input id="date" placeholder="Date" type="date"/>
