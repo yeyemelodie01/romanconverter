@@ -14,19 +14,19 @@ function Home() {
         </div>
         <div className="secondChildGrid">
           <div className="contentFlex">
-            <div>1</div>
+            <div className="normalNumber">1</div>
             <div className='border'/>
-            <div>I</div>
+            <div className="romanNumber">I</div>
           </div>
           <div className="contentFlex">
-            <div>09</div>
+            <div className="normalNumber">09</div>
             <div className='border'/>
-            <div>IX</div>
+            <div className="romanNumber">IX</div>
           </div>
           <div className="contentFlex">
-            <div>1933</div>
-            <div className='border'/>
-            <div>MCMXCIII</div>
+            <div className="normalNumber">1933</div>
+            <div className="border widthYear"/>
+            <div className="romanNumber">MCMXCIII</div>
           </div>
         </div>
         <div className="thirdChildGrid">

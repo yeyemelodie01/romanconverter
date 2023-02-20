@@ -39,12 +39,26 @@
     align-items: center;
 }
 
+.normalNumber{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
 .border{
     width: 200px;
     height: 30px;
     border-left: 2px solid #CCC;
     border-top: 2px solid #CCC;
     border-right: 2px solid #CCC;
+}
+
+.widthYear{
+    width: 520px;
+}
+
+.romanNumber{
+    font-size: 100px;
+    font-family: "EB Garamond", serif;
 }
 
 .styleButton{
