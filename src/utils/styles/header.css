@@ -4,6 +4,7 @@ header{
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .divImg{
@@ -34,4 +35,8 @@ nav{
 .divDeroulante{
     display: flex;
     align-items: center;
+}
+
+.flagFr{
+    width: 22px;
 }

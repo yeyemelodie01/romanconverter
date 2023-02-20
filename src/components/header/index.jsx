@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFlagUsa } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import LogoRoman from "../../assets/logo.png"
 import '../../utils/styles/header.css'
+import '../../utils/styles/bouton.css'
+import France from '../../assets/001-france.png'
 
 function Header(){
   return(
@@ -19,8 +21,9 @@ function Header(){
             </div>
           </ul>
           <div className="divDeroulante">
-            <button>
-              <FontAwesomeIcon icon={ faFlagUsa }/>
+            <button className="buttonFlag">
+              <img src={ France } alt="drapeau de France" className="flagFr"/>
+              <FontAwesomeIcon icon={ faAngleDown }/>
             </button>
           </div>
         </nav>

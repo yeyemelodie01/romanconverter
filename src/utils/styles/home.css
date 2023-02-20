@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0;
-    grid-row-gap: 30px;
+    grid-row-gap: 10px;
 }
 
 .firstChildGrid{
@@ -31,11 +31,18 @@
 .titleHome{
     font-family: "EB Garamond", serif;
     font-size: 70px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .subTitleHome{
     margin-bottom: 20px;
+}
+
+.inputStyle{
+    padding: 8px 6px;
+    width: 170px;
+    margin-right: 20px;
+    font-size: 15px;
 }
 
 .contentFlex{
@@ -65,10 +72,4 @@
 .romanNumber{
     font-size: 100px;
     font-family: "EB Garamond", serif;
-}
-
-.styleButton{
-    background-color: #C71A1A;
-    border: 2px solid transparent;
-    padding: 10px;
 }

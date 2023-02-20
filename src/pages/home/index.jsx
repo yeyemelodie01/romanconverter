@@ -1,4 +1,5 @@
 import '../../utils/styles/home.css'
+import '../../utils/styles/bouton.css'
 
 
 function Home() {
@@ -6,11 +7,11 @@ function Home() {
       <div className="parentGrid">
         <div className="firstChildGrid">
           <h1 className="titleHome">Convertisseur de Chiffre Romain</h1>
-          <h2 className="subTitleHome">Convertisser une date ou un nombre</h2>
+          <h2 className="subTitleHome">Convertisser un nombre</h2>
           <div>
-            <label form='date'/>
-            <input id="date" placeholder="Date" type="date"/>
-            <button>Convertir</button>
+            <label form='number'/>
+            <input id="number" className="inputStyle" placeholder="Entrez votre nombre" type="text"/>
+            <button className="buttonInpput">Convertir</button>
           </div>
         </div>
         <div className="secondChildGrid">
