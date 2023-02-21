@@ -20,13 +20,13 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
+    width: 26%;
 }
 
 .divFlexLi{
     display: flex;
     justify-content: space-around;
-    width: 70%;
+    width: 60%;
 }
 
 .liSize{

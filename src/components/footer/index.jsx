@@ -9,9 +9,13 @@ library.add(farFaSun)
 function Footer(){
   return (
     <footer>
-      <FontAwesomeIcon icon={ faGithub } />
-      <p>Design by Mélodie Yéyé</p>
-      <FontAwesomeIcon icon={ farFaSun } />
+      <div className="gridFooter">
+        <FontAwesomeIcon className="iconGit" icon={ faGithub } />
+        <div className="divCopyright">
+          <p>Design by Mélodie Yéyé</p>
+          <FontAwesomeIcon icon={ farFaSun } />
+        </div>
+      </div>
     </footer>
   )
 }
