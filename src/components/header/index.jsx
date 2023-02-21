@@ -21,6 +21,11 @@ function Header(){
             </div>
           </ul>
           <div className="divDeroulante">
+            <label></label>
+            <select>
+              <option><img src={ France } alt="drapeau de France" className="flagFr"/></option>
+              <option><img src={ France } alt="drapeau de France" className="flagFr"/></option>
+            </select>
             <button className="btnFlag">
               <img src={ France } alt="drapeau de France" className="flagFr"/>
               <FontAwesomeIcon icon={ faAngleDown }/>
