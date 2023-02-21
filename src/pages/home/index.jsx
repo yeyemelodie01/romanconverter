@@ -7,11 +7,13 @@ function Home() {
       <div className="parentGrid">
         <div className="firstChildGrid">
           <h1 className="titleHome">Convertisseur de Chiffre Romain</h1>
-          <h2 className="subTitleHome">Convertisser un nombre</h2>
-          <div>
-            <label form='number'/>
-            <input id="number" className="inputStyle" placeholder="Entrez votre nombre" type="text"/>
-            <button className="buttonInpput">Convertir</button>
+          <div className="divInputNumber">
+            <h2 className="subTitleHome">Convertisser votre nombre puis enregistrer-le en PDF</h2>
+            <div>
+              <label form='number'/>
+              <input id="number" className="inputStyle" placeholder="Entrez votre nombre" type="text"/>
+              <button className="btnInput">Convertir</button>
+            </div>
           </div>
         </div>
         <div className="secondChildGrid">
@@ -32,7 +34,7 @@ function Home() {
           </div>
         </div>
         <div className="thirdChildGrid">
-          <button className="styleButton">Enregistrer en .PDF</button>
+          <button className="btnRegister">Enregistrer en .PDF</button>
         </div>
       </div>
   );

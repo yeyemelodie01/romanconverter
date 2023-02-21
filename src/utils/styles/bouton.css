@@ -1,16 +1,23 @@
-.styleButton{
-    background-color: #C71A1A;
-    border: 2px solid transparent;
-    padding: 10px;
-    border-radius: 6px;
-}
-
-
-.buttonFlag{
+.btnFlag{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 50px;
     border: 2px solid midnightblue;
     border-radius: 3px;
+}
+
+.btnInput{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.btnRegister{
+    background-color: #C71A1A;
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 6px;
 }

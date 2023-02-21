@@ -21,7 +21,7 @@ function Header(){
             </div>
           </ul>
           <div className="divDeroulante">
-            <button className="buttonFlag">
+            <button className="btnFlag">
               <img src={ France } alt="drapeau de France" className="flagFr"/>
               <FontAwesomeIcon icon={ faAngleDown }/>
             </button>
