@@ -1,0 +1,42 @@
+header{
+    padding: 10px 30px;
+    margin-bottom: 30px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divImg{
+    width: 116px;
+}
+
+.styleLogo{
+ width: 100%;
+}
+
+.listFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 26%;
+}
+
+.divFlexLi{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.liSize{
+    font-size: 20px;
+}
+
+.divDeroulante{
+
+}
+
+.flagFr{
+    width: 22px;
+}

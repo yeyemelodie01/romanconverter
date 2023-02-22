@@ -1,0 +1,31 @@
+footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    height: 240px;
+    margin-bottom: 10px;
+}
+
+.gridFooter{
+    grid-area: 1 / 1 / 2 / 2 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.iconGit{
+    font-size: 25px;
+}
+
+.divCopyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.divCopyright p{
+    margin-right: 10px;
+}
