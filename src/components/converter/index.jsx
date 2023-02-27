@@ -123,10 +123,10 @@ function RomanConverter(){
         'convertedNumber': convertNumber(parseInt(number)),
       });
     }
-    console.log(result);
-    for ( let numConvert in result){
-      document.getElementById('numInit').innerHTML = result[numConvert].number;
-      document.getElementById('numResult').innerHTML = result[numConvert].convertedNumber;
+
+    for ( let i=0; i < result.length; i++) {
+      document.getElementById('numInit_'+i).innerHTML = result[i].number;
+      document.getElementById('numResult_'+i).innerHTML = result[i].convertedNumber;
     }
   };
   return (
@@ -145,4 +145,4 @@ function RomanConverter(){
   )
 }
 
-export default RomanConverter
+export default RomanConverter;

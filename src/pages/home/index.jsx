@@ -21,10 +21,24 @@ function Home() {
           <div className="divSecondGrid">
             <div className="divFlexSecond">
               <div className="contentFlex">
-                <div id='numInit' className='normalNumber'/>
+                <div id='numInit_0' className='normalNumber'/>
                 <div>
                   <div className="border"/>
-                  <div id='numResult' className='romanNumber'/>
+                  <div id='numResult_0' className='romanNumber'/>
+                </div>
+              </div>
+              <div className="contentFlex">
+                <div id='numInit_1' className='normalNumber'/>
+                <div>
+                  <div className="border"/>
+                  <div id='numResult_1' className='romanNumber'/>
+                </div>
+              </div>
+              <div className="contentFlex">
+                <div id='numInit_2' className='normalNumber'/>
+                <div>
+                  <div className="border"/>
+                  <div id='numResult_2' className='romanNumber'/>
                 </div>
               </div>
               {/*<div className="contentFlex">*/}
