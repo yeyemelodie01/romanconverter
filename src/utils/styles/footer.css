@@ -4,7 +4,7 @@ footer{
     grid-template-rows: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 0;
-    height: 240px;
+    height: 135px;
     margin-bottom: 10px;
 }
 

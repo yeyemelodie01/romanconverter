@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../../utils/styles/converter.css'
 
 function RomanConverter(){
   const [inputValue, setInputValue] = useState('');
@@ -131,14 +132,16 @@ function RomanConverter(){
   };
   return (
     <>
-      <button className="btnInput">Convertir</button>
+      <label form='number'/>
       <input
+        id="number"
+        className="inputStyle"
         type="text"
-        placeholder="Enter a number"
+        placeholder="Entrer un nombre"
         value={inputValue}
         onChange={handleInputChange}
       />
-      <button onClick={handleConvertClick}>Convert</button>
+      <button className="btnInput" onClick={handleConvertClick}>Convertir</button>
     </>
   )
 }

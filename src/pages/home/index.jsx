@@ -12,8 +12,6 @@ function Home() {
             <div className="divInputNumber">
               <h2 className="subTitleHome">Convertisser votre nombre</h2>
               <div>
-                <label form='number'/>
-                <input id="number" className="inputStyle" placeholder="Entrez votre nombre" type="text"/>
                 <Converter />
               </div>
             </div>
