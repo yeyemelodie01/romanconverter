@@ -1,8 +1,9 @@
 import '../../utils/styles/home.css'
 import '../../utils/styles/bouton.css'
-
+import Converter from '../../components/converter'
 
 function Home() {
+
   return (
       <div className="parentGrid">
         <div className="firstChildGrid">
@@ -13,7 +14,7 @@ function Home() {
               <div>
                 <label form='number'/>
                 <input id="number" className="inputStyle" placeholder="Entrez votre nombre" type="text"/>
-                <button className="btnInput">Convertir</button>
+                <Converter />
               </div>
             </div>
           </div>
@@ -22,26 +23,26 @@ function Home() {
           <div className="divSecondGrid">
             <div className="divFlexSecond">
               <div className="contentFlex">
-                <div className="normalNumber">1</div>
+                <div id='numInit' className='normalNumber'/>
                 <div>
                   <div className="border"/>
-                  <div className="romanNumber">I</div>
+                  <div id='numResult' className='romanNumber'/>
                 </div>
               </div>
-              <div className="contentFlex">
-                <div className="normalNumber">09</div>
-                <div>
-                  <div className="border"/>
-                  <div className="romanNumber">IX</div>
-                </div>
-              </div>
-              <div className="contentFlex">
-                <div className="normalNumber">1993</div>
-                <div>
-                  <div className="border widthYear"/>
-                  <div className="romanNumber">MCMXCIII</div>
-                </div>
-              </div>
+              {/*<div className="contentFlex">*/}
+              {/*  <div className="normalNumber">09</div>*/}
+              {/*  <div>*/}
+              {/*    <div className="border"/>*/}
+              {/*    <div className="romanNumber">IX</div>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
+              {/*<div className="contentFlex">*/}
+              {/*  <div className="normalNumber">1993</div>*/}
+              {/*  <div>*/}
+              {/*    <div className="border widthYear"/>*/}
+              {/*    <div className="romanNumber">MCMXCIII</div>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
             </div>
             <button className="btnRegister">Enregistrer en .PDF</button>
           </div>
