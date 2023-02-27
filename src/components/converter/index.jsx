@@ -124,7 +124,6 @@ function RomanConverter(){
       });
     }
     console.log(result);
-    console.log(JSON.stringify( ...result ));
     for ( let numConvert in result){
       document.getElementById('numInit').innerHTML = result[numConvert].number;
       document.getElementById('numResult').innerHTML = result[numConvert].convertedNumber;
