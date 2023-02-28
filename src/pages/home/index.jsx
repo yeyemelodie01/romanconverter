@@ -10,7 +10,6 @@ function Home() {
           <div>
             <h1 className="titleHome">Romanator</h1>
             <div className="divInputNumber">
-              <h2 className="subTitleHome">Ajouter une date ou un nombre</h2>
               <div>
                 <Converter />
               </div>
