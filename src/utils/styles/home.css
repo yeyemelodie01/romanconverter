@@ -24,7 +24,9 @@
 }
 
 .divFlexSecond{
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .titleHome{
@@ -44,7 +46,6 @@
 
 .contentFlex{
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     height: 310px;
@@ -52,13 +53,7 @@
 
 .normalNumber{
     font-size: 50px;
-}
-
-.border{
-    height: 30px;
-    border-left: 2px solid #CCC;
-    border-top: 2px solid #CCC;
-    border-right: 2px solid #CCC;
+    margin-bottom: 20px;
 }
 
 .widthYear{
@@ -66,9 +61,11 @@
 }
 
 .romanNumber{
+    height: 30px;
     font-size: 100px;
     font-family: "EB Garamond", serif;
-    position: relative;
-    bottom: 34px;
     padding: 0 20px;
+    border-left: 2px solid #CCC;
+    border-top: 2px solid #CCC;
+    border-right: 2px solid #CCC;
 }

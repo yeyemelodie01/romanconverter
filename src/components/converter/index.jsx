@@ -123,8 +123,23 @@ function RomanConverter(){
         'convertedNumber': convertNumber(parseInt(number)),
       });
     }
-
+    let divParent = document.getElementById('divParent');
     for ( let i=0; i < result.length; i++) {
+      const divContentFlex = document.createElement('div');
+      const divNormal = document.createElement('div');
+      const divRoman = document.createElement('div');
+
+      divContentFlex.setAttribute('class', 'contentFlex');
+      divNormal.setAttribute('class', 'normalNumber');
+      divRoman.setAttribute('class', 'romanNumber');
+      
+      divNormal.setAttribute('id', 'numInit_'+ i);
+      divRoman.setAttribute('id', 'numResult_'+ i);
+
+      divParent.appendChild(divContentFlex);
+      divContentFlex.appendChild(divNormal);
+      divContentFlex.appendChild(divRoman);
+
       document.getElementById('numInit_'+i).innerHTML = result[i].number;
       document.getElementById('numResult_'+i).innerHTML = result[i].convertedNumber;
     }
