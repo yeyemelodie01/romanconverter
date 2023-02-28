@@ -152,7 +152,7 @@ function RomanConverter(){
         id="number"
         className="inputStyle"
         type="text"
-        placeholder="Entrer un nombre"
+        placeholder="Ecrivez..."
         value={inputValue}
         onChange={handleInputChange}
       />

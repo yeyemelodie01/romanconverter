@@ -10,7 +10,7 @@ function Home() {
           <div>
             <h1 className="titleHome">Romanator</h1>
             <div className="divInputNumber">
-              <h2 className="subTitleHome">"Transformez les chiffres en histoire avec Romanator <br/> convertisseur de chiffres et dates en chiffres romains !"</h2>
+              <h2 className="subTitleHome">Transformez les chiffres en histoire avec Romanator - convertisseur de chiffres et dates en chiffres romains !</h2>
               <div>
                 <Converter />
               </div>

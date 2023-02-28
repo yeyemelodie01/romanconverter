@@ -8,12 +8,13 @@
 }
 
 .btnInput{
-    padding: 5px;
+    padding: 9px 14px;
     font-size: 15px;
     font-weight: bold;
-    border: 2px solid;
+    border: 2px solid #000;
     border-radius: 3px;
-    background-color: transparent;
+    background-color: #000;
+    color: #FFF;
 }
 
 .btnRegister{
