@@ -5,7 +5,7 @@ function Footer(){
     <footer>
       <div className="gridFooter">
         <div className="divCopyright">
-          <p>Design by Mélodie Yéyé</p>
+          <p>© 2023 Made with love by <span>Mélodie Yéyé</span></p>
         </div>
       </div>
     </footer>
