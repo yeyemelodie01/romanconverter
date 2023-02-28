@@ -132,7 +132,7 @@ function RomanConverter(){
       divContentFlex.setAttribute('class', 'contentFlex');
       divNormal.setAttribute('class', 'normalNumber');
       divRoman.setAttribute('class', 'romanNumber');
-      
+
       divNormal.setAttribute('id', 'numInit_'+ i);
       divRoman.setAttribute('id', 'numResult_'+ i);
 
