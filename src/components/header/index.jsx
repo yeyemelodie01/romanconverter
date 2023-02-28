@@ -1,9 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import LogoRoman from "../../assets/logo.png"
 import '../../utils/styles/header.css'
 import '../../utils/styles/bouton.css'
-import France from '../../assets/001-france.png'
+import France from '../../assets/french-guiana.svg'
+import arrowDown from '../../assets/angle-arrow-down_icon-icons.com_73683.svg'
 
 function Header(){
   return(
@@ -28,7 +27,7 @@ function Header(){
             </select>
             <button className="btnFlag">
               <img src={ France } alt="drapeau de France" className="flagFr"/>
-              <FontAwesomeIcon icon={ faAngleDown }/>
+              <img src={ arrowDown } alt="drapeau de France" className="flagFr"/>
             </button>
           </div>
         </nav>
