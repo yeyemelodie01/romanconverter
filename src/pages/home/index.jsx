@@ -23,7 +23,6 @@ function Home() {
             </div>
             <button className="btnRegister">Enregistrer en .PDF</button>
           </div>
-
         </div>
       </div>
   );

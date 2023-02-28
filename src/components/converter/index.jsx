@@ -123,6 +123,7 @@ function RomanConverter(){
         'convertedNumber': convertNumber(parseInt(number)),
       });
     }
+
     let divParent = document.getElementById('divParent');
     for ( let i=0; i < result.length; i++) {
       const divContentFlex = document.createElement('div');
