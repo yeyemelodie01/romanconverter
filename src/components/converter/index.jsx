@@ -4,7 +4,6 @@ import '../../utils/styles/converter.css'
 
 function RomanConverter(){
   const [inputValue, setInputValue] = useState('');
-  let divParent = document.getElementById('divParent');
 
   const romanNumeralMap = {
     1000: 'M',
@@ -126,6 +125,8 @@ function RomanConverter(){
       });
     }
 
+    let divParent = document.getElementById('divParent');
+    divParent.innerHTML = '';
     for ( let i=0; i < result.length; i++) {
       let divContentFlex = document.createElement('div');
       let divNormal = document.createElement('div');
@@ -145,10 +146,6 @@ function RomanConverter(){
       document.getElementById('numInit_'+i).innerHTML = result[i].number;
       document.getElementById('numResult_'+i).innerHTML = result[i].convertedNumber;
     }
-    // setTimeout(() => {
-    //   document.location.reload();
-    // }, 150000)
-
   };
   return (
     <>
