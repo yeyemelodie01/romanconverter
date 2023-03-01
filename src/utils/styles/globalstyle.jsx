@@ -14,6 +14,7 @@ body {
   margin: 0;
   text-align: center;
   background-color: #F1F1F1;
+  color: #333333;
 }
 
 img {

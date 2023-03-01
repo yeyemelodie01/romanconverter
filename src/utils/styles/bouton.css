@@ -11,9 +11,9 @@
     padding: 9px 14px;
     font-size: 15px;
     font-weight: bold;
-    border: 2px solid #000;
+    border: 2px solid #333333;
     border-radius: 3px;
-    background-color: #000;
+    background-color: #333333;
     color: #FFF;
 }
 
@@ -21,8 +21,8 @@
     width: 9%;
     font-weight: bold;
     color: #FFF;
-    background-color: #000;
-    border: 2px solid #000;
+    background-color: #333333;
+    border: 2px solid #333333;
     padding: 10px;
     border-radius: 2px;
 }
