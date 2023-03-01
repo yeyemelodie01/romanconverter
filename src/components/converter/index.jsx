@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import '../../utils/styles/converter.css'
+import { doc } from 'prettier'
 
 function RomanConverter(){
   const [inputValue, setInputValue] = useState('');
+  let divParent = document.getElementById('divParent');
 
   const romanNumeralMap = {
     1000: 'M',
@@ -108,6 +110,7 @@ function RomanConverter(){
   };
 
   const handleConvertClick = () => {
+
     let number = splitDate(inputValue);
     let result = [];
     if (Array.isArray(number)) {
@@ -124,7 +127,6 @@ function RomanConverter(){
       });
     }
 
-    let divParent = document.getElementById('divParent');
     for ( let i=0; i < result.length; i++) {
       const divContentFlex = document.createElement('div');
       const divNormal = document.createElement('div');
@@ -144,6 +146,10 @@ function RomanConverter(){
       document.getElementById('numInit_'+i).innerHTML = result[i].number;
       document.getElementById('numResult_'+i).innerHTML = result[i].convertedNumber;
     }
+    // setTimeout(() => {
+    //   document.location.reload();
+    // }, 150000)
+
   };
   return (
     <>

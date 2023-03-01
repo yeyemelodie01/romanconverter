@@ -18,9 +18,11 @@
 }
 
 .btnRegister{
-    width: 15%;
-    background-color: #C71A1A;
-    border: 2px solid transparent;
+    width: 9%;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #000;
+    border: 2px solid #000;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 2px;
 }
