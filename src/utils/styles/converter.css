@@ -11,12 +11,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 17px;
+    margin-right: 15px;
     margin-top: 5px;
 }
 
 .listInput li{
-    list-style: disc;
+    list-style: square;
     color: #A7A7AE;
     font-size: 14px;
 }

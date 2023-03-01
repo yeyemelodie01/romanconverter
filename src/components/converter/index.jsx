@@ -165,8 +165,8 @@ function RomanConverter(){
         <button className="btnInput" onClick={handleConvertClick}>Convertir</button>
       </div>
       <ul className="listInput">
-        <li>nombre: 0 - 9999</li>
-        <li>date: JJ/MM/AAAA ou YYYY/MM/DD</li>
+        <li>Nombre: 0 - 9999.</li>
+        <li>Date: JJ/MM/AAAA ou YYYY/MM/DD.</li>
       </ul>
     </>
   )
