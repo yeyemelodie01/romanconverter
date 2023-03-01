@@ -11,7 +11,7 @@ function Home() {
             <h1 className="titleHome">Romanator</h1>
             <div className="divInputNumber">
               <h2 className="subTitleHome">Transformez les chiffres en histoire avec Romanator - convertisseur de chiffres et dates en chiffres romains !</h2>
-              <div>
+              <div className="divConverter">
                 <Converter />
               </div>
             </div>

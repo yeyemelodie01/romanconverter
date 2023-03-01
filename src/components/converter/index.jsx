@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../../utils/styles/converter.css'
-import { doc } from 'prettier'
+
 
 function RomanConverter(){
   const [inputValue, setInputValue] = useState('');
@@ -110,7 +110,6 @@ function RomanConverter(){
   };
 
   const handleConvertClick = () => {
-
     let number = splitDate(inputValue);
     let result = [];
     if (Array.isArray(number)) {
@@ -128,9 +127,9 @@ function RomanConverter(){
     }
 
     for ( let i=0; i < result.length; i++) {
-      const divContentFlex = document.createElement('div');
-      const divNormal = document.createElement('div');
-      const divRoman = document.createElement('div');
+      let divContentFlex = document.createElement('div');
+      let divNormal = document.createElement('div');
+      let divRoman = document.createElement('div');
 
       divContentFlex.setAttribute('class', 'contentFlex');
       divNormal.setAttribute('class', 'normalNumber');
@@ -153,16 +152,22 @@ function RomanConverter(){
   };
   return (
     <>
-      <label form='number'/>
-      <input
-        id="number"
-        className="inputStyle"
-        type="text"
-        placeholder="Ecrivez..."
-        value={inputValue}
-        onChange={handleInputChange}
-      />
-      <button className="btnInput" onClick={handleConvertClick}>Convertir</button>
+      <div>
+        <label form='number'/>
+        <input
+          id="number"
+          className="inputStyle"
+          type="text"
+          placeholder="Ecrivez..."
+          value={inputValue}
+          onChange={handleInputChange}
+        />
+        <button className="btnInput" onClick={handleConvertClick}>Convertir</button>
+      </div>
+      <ul className="listInput">
+        <li>nombre: 0 - 9999</li>
+        <li>date: JJ/MM/AAAA ou YYYY/MM/DD</li>
+      </ul>
     </>
   )
 }
