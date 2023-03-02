@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 //import colors from './colors'
+import { ThemeContext } from '../context'
+import { useContext } from 'react'
 
 const Styleglobal = createGlobalStyle`
 * {
@@ -13,8 +15,18 @@ const Styleglobal = createGlobalStyle`
 body {
   margin: 0;
   text-align: center;
-  background-color: #F1F1F1;
-  color: #333333;
+  background-color: ${({ isDarkMode }) => isDarkMode ? '#333333' : '#F1F1F1'};
+  color: ${({ isDarkMode }) => isDarkMode ? '#F1F1F1' : '#333333'};
+}
+
+.btnInput{
+  border-color: ${({ isDarkMode }) => isDarkMode ? '#F1F1F1' : '#333333'};
+  background-color: ${({ isDarkMode }) => isDarkMode ? '#F1F1F1' : '#333333'};
+  color: ${({ isDarkMode }) => isDarkMode ? '#333333' : '#FFF'};
+}
+
+.footerName{
+  color: ${({ isDarkMode }) => isDarkMode ? '#F1F1F1' : '#333333'};
 }
 
 img {
@@ -38,8 +50,9 @@ li {
 `
 
 function GlobalStyle() {
+  const { theme } = useContext(ThemeContext)
 return(
-<Styleglobal />
+  <Styleglobal isDarkMode={theme === 'dark'}/>
 )
 }
 

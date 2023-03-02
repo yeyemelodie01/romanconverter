@@ -1,21 +1,20 @@
 .btnFlag{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     width: 50px;
-    border: 2px solid midnightblue;
-    border-radius: 3px;
+    border: 2px solid #E0E0E0;
+    border-radius: 2px;
+    background: #FFF;
     cursor: pointer;
+    padding: 5px;
 }
 
 .btnInput{
-    padding: 9px 14px;
+    padding: 10px 14px;
     font-size: 15px;
     font-weight: bold;
-    border: 2px solid #333333;
+    border: 2px solid;
     border-radius: 3px;
-    background-color: #333333;
-    color: #FFF;
 }
 
 .btnRegister{
@@ -26,4 +25,12 @@
     border: 2px solid #333333;
     padding: 10px;
     border-radius: 2px;
+}
+
+.btnLight{
+    width: max-content;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
 }

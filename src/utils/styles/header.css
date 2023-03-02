@@ -39,6 +39,11 @@ nav{
 
 .flagFr{
     width: 22px;
+    margin-right: 4px;
+}
+
+.arrowHead{
+    width: 12px;
 }
 
 .listScrolling{

@@ -28,7 +28,7 @@ function Header(){
           <div className="divScrolling">
             <button className="btnFlag" onClick={ BtnChangeLangue }>
               <img src={ France } alt="drapeau de France" className="flagFr"/>
-              <img src={ arrowDown } alt="drapeau de France" className="flagFr"/>
+              <img src={ arrowDown } alt="pointe de flèche" className="arrowHead"/>
             </button>
             <ul id="" className="listScrolling">
               <li>
