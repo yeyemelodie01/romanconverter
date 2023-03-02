@@ -7,8 +7,8 @@ import arrowDown from '../../assets/angle-arrow-down_icon-icons.com_73683.svg'
 
 function Header(){
   function BtnChangeLangue() {
-    let list = document.getElementsByClassName('listScrolling');
-    list.style.display = 'block'
+    let list = document.getElementById('listScrolling');
+    list.style.display = { 'block': 'none' };
   }
 
   return(
@@ -27,12 +27,12 @@ function Header(){
           </ul>
           <div className="divScrolling">
             <button className="btnFlag" onClick={ BtnChangeLangue }>
-              <img src={ France } alt="drapeau de France" className="flagFr"/>
+              <img src={ France } alt="drapeau de France" className="flag"/>
               <img src={ arrowDown } alt="pointe de flèche" className="arrowHead"/>
             </button>
-            <ul id="" className="listScrolling">
+            <ul id="listScrolling" className="listScrolling">
               <li>
-                <img src={ USA } alt="drapeau des état-unis"/>
+                <img src={ USA } alt="drapeau des état-unis" className="flag"/>
               </li>
             </ul>
           </div>
