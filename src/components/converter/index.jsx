@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { validNumber } from '../../utils/Regex'
 import '../../utils/styles/converter.css'
 
 function RomanConverter(){
   const [inputValue, setInputValue] = useState('');
+  const [ inputErr, setInputErr ] = useState(false);
 
   const romanNumeralMap = {
     1000: 'M',
@@ -32,12 +34,16 @@ function RomanConverter(){
   };
 
   function splitDate(inputValue) {
-    console.log(inputValue)
-    const dateArray = inputValue.split('/');
-    if (dateArray.length > 1) {
-      return dateArray;
+    if (validNumber.test(inputValue) === false) {
+      setInputErr(true);
+    } else {
+      setInputErr(false);
+      const dateArray = inputValue.split('/');
+      if (dateArray.length > 1) {
+        return dateArray;
+      }
+      return inputValue;
     }
-    return inputValue;
   }
 
   function convertNumber(numberToConvert) {
@@ -163,7 +169,6 @@ function RomanConverter(){
           minLength="1"
           maxLength="10"
           required="required"
-          pattern="^(?:[1-9][0-9]{3}|[1-9][0-9]{2}|[1-9][0-9]|[1-9])$"
         />
         <input
           type="submit"
@@ -172,6 +177,7 @@ function RomanConverter(){
           onClick={handleConvertClick}
         />
       </div>
+      { inputErr && <p>Nombre non valide</p> }
       <ul className="listInput">
         <li>Nombre: 1 - 9999.</li>
         <li>Date: JJ/MM/AAAA ou YYYY/MM/DD.</li>
