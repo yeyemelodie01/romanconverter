@@ -20,3 +20,11 @@
     color: #A7A7AE;
     font-size: 14px;
 }
+
+input:invalid {
+    border: 2px solid #EB334B;
+}
+
+input:invalid:focus {
+    border-color: #EB334B;
+}

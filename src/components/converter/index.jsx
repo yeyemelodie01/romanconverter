@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import '../../utils/styles/converter.css'
-import { useForm } from 'react-hook-form'
 
 function RomanConverter(){
   const [inputValue, setInputValue] = useState('');
-  const { register, handleSubmit } = useForm();
 
   const romanNumeralMap = {
     1000: 'M',
@@ -34,11 +32,11 @@ function RomanConverter(){
   };
 
   function splitDate(inputValue) {
+    console.log(inputValue)
     const dateArray = inputValue.split('/');
     if (dateArray.length > 1) {
       return dateArray;
     }
-
     return inputValue;
   }
 
@@ -111,6 +109,7 @@ function RomanConverter(){
 
   const handleConvertClick = () => {
     let number = splitDate(inputValue);
+    console.log(number)
     let result = [];
     if (Array.isArray(number)) {
       for (let i = 0; i < number.length; i++) {
@@ -124,8 +123,9 @@ function RomanConverter(){
         'number': number,
         'convertedNumber': convertNumber(parseInt(number)),
       });
-    }
 
+    }
+  console.log(result)
     let divParent = document.getElementById('divParent');
     divParent.innerHTML = '';
     for ( let i=0; i < result.length; i++) {
@@ -148,29 +148,32 @@ function RomanConverter(){
       document.getElementById('numResult_'+i).innerHTML = result[i].convertedNumber;
     }
   };
+
   return (
     <>
-      <form onSubmit={handleSubmit(handleConvertClick)}>
+      <div>
         <label form='number'/>
         <input
           id="number"
           className="inputStyle"
           type="text"
           placeholder="Ecrivez..."
-          {...register("text", {
-              pattern:{
-                value: /^(((((1[26]|2[048])00)|[12]\d([2468][048]|[13579][26]|0[48]))-((((0[13578]|1[02])-(0[1-9]|[12]\d|3[01]))|((0[469]|11)-(0[1-9]|[12]\d|30)))|(02-(0[1-9]|[12]\d))))|((([12]\d([02468][1235679]|[13579][01345789]))|((1[1345789]|2[1235679])00))-((((0[13578]|1[02])-(0[1-9]|[12]\d|3[01]))|((0[469]|11)-(0[1-9]|[12]\d|30)))|(02-(0[1-9]|1\d|2[0-8])))))$/,
-                message: "Nombre ou Date non valide",
-              }
-          }
-          )}
-          value={inputValue}
-          onChange={handleInputChange}
+          value={ inputValue }
+          onChange={ handleInputChange }
+          minLength="1"
+          maxLength="10"
+          required="required"
+          pattern="^(?:[1-9][0-9]{3}|[1-9][0-9]{2}|[1-9][0-9]|[1-9])$"
         />
-        <button className="btnInput" onClick={handleConvertClick}>Convertir</button>
-      </form>
+        <input
+          type="submit"
+          className="btnInput"
+          value="Convertir"
+          onClick={handleConvertClick}
+        />
+      </div>
       <ul className="listInput">
-        <li>Nombre: 0 - 9999.</li>
+        <li>Nombre: 1 - 9999.</li>
         <li>Date: JJ/MM/AAAA ou YYYY/MM/DD.</li>
       </ul>
     </>
