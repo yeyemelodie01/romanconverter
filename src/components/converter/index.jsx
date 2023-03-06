@@ -64,7 +64,9 @@ function RomanConverter(){
       }
     }
 
-    romanConverted+=romanNumeralMap[units];
+    if (romanNumeralMap[units] !== undefined) {
+      romanConverted += romanNumeralMap[units];
+    }
 
     return romanConverted;
   }
