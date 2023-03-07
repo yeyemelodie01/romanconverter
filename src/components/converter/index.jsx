@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { validNumber } from '../../utils/Regex'
+import { validNumber, validDate } from '../../utils/Regex'
 import '../../utils/styles/converter.css'
 
 function RomanConverter(){
@@ -111,7 +111,9 @@ function RomanConverter(){
   };
 
   const handleConvertClick = () => {
-    if( validNumber.test(inputValue) === false ){
+    console.log(validNumber.test(inputValue));
+    console.log(validDate.test(inputValue));
+    if( validNumber.test(inputValue) === false || validDate.test(inputValue) === false){
       setInputErr(true);
     } else {
       setInputErr(false);
