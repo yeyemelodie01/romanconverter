@@ -111,11 +111,51 @@ function RomanConverter(){
   };
 
   const handleConvertClick = () => {
+    console.log(inputValue);
     console.log(validNumber.test(inputValue));
     console.log(validDate.test(inputValue));
-    if( validNumber.test(inputValue) === false || validDate.test(inputValue) === false){
+    if( validNumber.test(inputValue) === false && validDate.test(inputValue) === false){
       setInputErr(true);
-    } else {
+    } else if( validNumber.test(inputValue) === true && validDate.test(inputValue) === false ){
+        setInputErr(false);
+      let number = splitDate(inputValue);
+      let result = [];
+      if (Array.isArray(number)) {
+        for (let i = 0; i < number.length; i++) {
+          result.push({
+            'number': number[i],
+            'convertedNumber': convertNumber(parseInt(number[i])),
+          });
+        }
+      } else {
+        result.push({
+          'number': number,
+          'convertedNumber': convertNumber(parseInt(number)),
+        });
+      }
+
+      let divParent = document.getElementById('divParent');
+      divParent.innerHTML = '';
+      for ( let i=0; i < result.length; i++) {
+        let divContentFlex = document.createElement('div');
+        let divNormal = document.createElement('div');
+        let divRoman = document.createElement('div');
+
+        divContentFlex.setAttribute('class', 'contentFlex');
+        divNormal.setAttribute('class', 'normalNumber');
+        divRoman.setAttribute('class', 'romanNumber');
+
+        divNormal.setAttribute('id', 'numInit_'+ i);
+        divRoman.setAttribute('id', 'numResult_'+ i);
+
+        divParent.appendChild(divContentFlex);
+        divContentFlex.appendChild(divNormal);
+        divContentFlex.appendChild(divRoman);
+
+        document.getElementById('numInit_'+i).innerHTML = result[i].number;
+        document.getElementById('numResult_'+i).innerHTML = result[i].convertedNumber;
+      }
+    } else if( validNumber.test(inputValue) === false && validDate.test(inputValue) === true ){
       setInputErr(false);
       let number = splitDate(inputValue);
       let result = [];
@@ -131,7 +171,6 @@ function RomanConverter(){
           'number': number,
           'convertedNumber': convertNumber(parseInt(number)),
         });
-
       }
       
       let divParent = document.getElementById('divParent');
