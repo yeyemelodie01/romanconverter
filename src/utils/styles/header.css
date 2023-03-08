@@ -4,23 +4,22 @@ header{
 }
 nav{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.divImg{
-    width: 116px;
+.logo{
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    margin-right: 20px;
 }
 
-.styleLogo{
- width: 100%;
+.divRoute{
+
 }
 
 .listFlex{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 29%;
 }
 
 .divFlexLi{
@@ -31,6 +30,11 @@ nav{
 
 .liSize{
     font-size: 20px;
+}
+
+.trait{
+    margin: 0 12px;
+    font-size: 26px;
 }
 
 .divScrolling{
