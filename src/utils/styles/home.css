@@ -77,3 +77,17 @@
     border-top: 2px solid #CCC;
     border-right: 2px solid #CCC;
 }
+
+/* RESPONSIVE */
+
+/* MOBILE */
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .titleHome{
+        font-size: 60px;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+}

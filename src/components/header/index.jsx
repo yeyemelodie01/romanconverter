@@ -17,14 +17,18 @@ function Header(){
       <header>
         <nav>
           <h1 className="logo">XXIX</h1>
-          <div className="divRoute">
+          <div className={ showBurger ? "divRoute" : "divRoute" }>
             <ul className="listFlex">
-              <li className="liSize">ACCUEIL</li>
-              <li><span className="trait">|</span></li>
-              <li className="liSize">À PROPOS</li>
+              <li className="liSize">
+                <a href="/">
+                  ACCUEIL
+                </a>
+              </li>
             </ul>
           </div>
-          <div>
+          <div className="btnBurger" onClick={() => {
+            setShowBurger(!showBurger);
+          }}>
 
           </div>
 
