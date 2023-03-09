@@ -29,6 +29,10 @@ body {
   color: ${({ isDarkMode }) => isDarkMode ? '#F1F1F1' : '#333333'};
 }
 
+.btnLight{
+  color: ${({ isDarkMode }) => isDarkMode ? '#F1F1F1' : '#333333'};
+}
+
 img {
   object-fit: contain;
 }

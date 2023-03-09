@@ -82,8 +82,39 @@
 
 /* MOBILE */
 @media screen and (min-width: 320px) and (max-width: 767px){
+    .parentGrid{
+        height: 1246px;
+        grid-row-gap: 40px;
+    }
+
+    .firstChildGrid{
+        width: 100%;
+    }
+
+    .secondChildGrid{
+        width: 100%;
+    }
+
     .titleHome{
         font-size: 60px;
+    }
+
+    .divFlexSecond{
+
+        flex-direction: column;
+    }
+
+    .contentFlex{
+        height: 160px;
+    }
+
+    .normalNumber{
+        font-size: 35px;
+    }
+
+    .romanNumber{
+        height: 10px;
+        font-size: 35px;
     }
 }
 

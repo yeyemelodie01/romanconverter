@@ -12,7 +12,7 @@ function Footer(){
         <div className="divCopyright">
           <p>© 2023 Made with love by <span className="footerName">Mélodie Yéyé</span></p>
           <button onClick={() => toggleTheme()} className="btnLight">
-            {theme === 'light' ? '☀️' : '🌙'}
+            {theme === 'light' ? '☼' : '☽'}
           </button>
         </div>
       </div>
