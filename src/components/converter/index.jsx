@@ -115,8 +115,6 @@ function RomanConverter(){
     if (false === !isNaN(inputValue) && inputValue.length === 10) {
       isValid = validDate.test(inputValue) || validDateUS.test(inputValue);
     }
-
-    console.log(isValid, inputValue);
     setInputErr(!isValid);
     if (isValid){
       let number = splitDate(inputValue);
@@ -181,7 +179,7 @@ function RomanConverter(){
           onClick={handleConvertClick}
         />
       </div>
-      { inputErr && <p>Nombre non valide</p> }
+      { inputErr && <p className="err">Nombre non valide</p> }
       <ul className="listInput">
         <li>Nombre: 1 - 9999.</li>
         <li>Date: JJ/MM/AAAA ou YYYY/MM/DD.</li>

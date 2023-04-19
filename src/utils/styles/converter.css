@@ -21,6 +21,12 @@
     font-size: 14px;
 }
 
+.err{
+    color: #EB334B;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
 input:invalid {
     border: 2px solid #EB334B;
 }

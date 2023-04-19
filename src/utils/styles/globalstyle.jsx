@@ -39,7 +39,7 @@ img {
 
 a {
   text-decoration: none;
-
+  color: ${({ isDarkMode }) => isDarkMode ? '#F1F1F1' : '#333333'};
 }
 
 main {
