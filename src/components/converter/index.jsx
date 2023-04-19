@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { validDate } from '../../utils/Regex'
+import { validDate,  validDateUS } from '../../utils/Regex'
 import '../../utils/styles/converter.css'
 
 function RomanConverter(){
@@ -113,13 +113,12 @@ function RomanConverter(){
   const handleConvertClick = () => {
     let isValid = !isNaN(inputValue) && inputValue.length < 6;
     if (false === !isNaN(inputValue) && inputValue.length === 10) {
-      isValid = validDate.test(inputValue);
+      isValid = validDate.test(inputValue) || validDateUS.test(inputValue);
     }
 
     console.log(isValid, inputValue);
-
+    setInputErr(!isValid);
     if (isValid){
-      setInputErr(!isValid);
       let number = splitDate(inputValue);
       let result = []
       if (Array.isArray(number)) {
