@@ -4,14 +4,10 @@
 }
 
 .btnFlag{
-    display: flex;
-    align-items: center;
-    width: 50px;
-    border: 2px solid #E0E0E0;
-    border-radius: 2px;
-    background: #FFF;
+    border: 0;
     cursor: pointer;
-    padding: 5px;
+    display: flex;
+    background: none;
 }
 
 /* BTN-CONVERTER */
