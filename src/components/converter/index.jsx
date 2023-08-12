@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { validDate,  validDateUS } from '../../utils/Regex'
 import '../../utils/styles/converter.css'
+import { useTranslation } from 'react-i18next'
 
 function RomanConverter(){
   const [inputValue, setInputValue] = useState('');
   const [ inputErr, setInputErr ] = useState(false);
+  const [ t ] = useTranslation('common')
 
   const romanNumeralMap = {
     1000: 'M',
@@ -165,7 +167,7 @@ function RomanConverter(){
           id="number"
           className="inputStyle"
           type="text"
-          placeholder="Ecrivez..."
+          placeholder={t('input.placeholder')}
           value={ inputValue }
           onChange={ handleInputChange }
           minLength="1"
@@ -175,14 +177,14 @@ function RomanConverter(){
         <input
           type="submit"
           className="btnInput"
-          value="Convertir"
+          value={t('input.btn')}
           onClick={handleConvertClick}
         />
       </div>
-      { inputErr && <p className="err">Nombre non valide</p> }
+      { inputErr && <p className="err">{t('input.error')}</p> }
       <ul className="listInput">
-        <li>Nombre: 1 - 9999.</li>
-        <li>Date: JJ/MM/AAAA ou YYYY/MM/DD.</li>
+        <li>{t('legend.number')} : 1 - 9999.</li>
+        <li>{t('legend.date')}</li>
       </ul>
     </>
   )

@@ -1,0 +1,14 @@
+{
+  "home": {
+    "description": "Transformez les chiffres en histoire avec Romanator - convertisseur de chiffres et dates en chiffres romains !"
+  },
+  "input": {
+    "placeholder": "Ecrivez...",
+    "error": "Nombre non valide",
+    "btn": "Convertir"
+  },
+  "legend": {
+    "number": "Nombre",
+    "date": "Date : JJ/MM/AAAA ou YYYY/MM/DD"
+  }
+}

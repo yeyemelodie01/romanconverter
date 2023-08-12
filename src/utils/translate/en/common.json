@@ -1,0 +1,14 @@
+{
+  "home": {
+    "description": "Turn numbers into history with Romanator - the Roman numeral and date converter!"
+  },
+  "input": {
+    "placeholder": "Write to...",
+    "error": "Invalid number",
+    "btn": "Convert"
+  },
+  "legend": {
+    "number": "Number",
+    "date": "Date : JJ/MM/AAAA or YYYY/MM/DD"
+  }
+}
