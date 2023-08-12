@@ -7,7 +7,7 @@ import USA from '../../assets/united-states.svg'
 
 function Header(){
   const [ showBurger, setShowBurger ] = useState(false);
-  const { i18n } = useTranslation('common');
+  const [ t,i18n ] = useTranslation('common');
   const changeLanguage = async(lng) => {
     await i18n.changeLanguage(lng);
   };
@@ -18,7 +18,7 @@ function Header(){
           <h1 className="logo">XXIX</h1>
           <div className="divNavContent">
             <div className={ showBurger ? "divRoute" : "divRoute" }>
-              <a href="/">ACCUEIL</a>
+              <a href="/">{t('header')}</a>
             </div>
             <div className="btnBurger" onClick={() => {setShowBurger(!showBurger);}}></div>
 
